@@ -9,3 +9,10 @@ The system should be based on single request / reply to messages, that is, there
 • Retrieve historical data: the user specifies the period of drawings she or he is interested in and gets all results from that period in the reply (this includes the drawn lucky number, the number of winners, and the winnings totals). The reply can also be an error in case the user specifies wrong periods (e.g. start point is after the end time point).
 
 In the basic solution, you are expected to write the server and client implementation using any communication technology (raw TCP or UDP is sufficient) and any data formats. The email sending does not have to be implemented, it is sufficient to just log the message on the console with the email recipient and the body of the message.
+
+Optional part 1 (0.5 point extra)
+In the optional part you are required to write the server as a REST API service, and use JSON as data format for any communication. You have to use the right kind of REST commands for the service (so e.g. drawing registration has to be a POST command). The actual email sending is still not required.
+
+Optional part 2 (another 0.5 point extra)
+On top of optional part 1 implement also the actual e-mail sending. You are on your own and you have to do research on how to go about it, but one idea would be to use the Google Mail REST API services to achieve this.
+Security note: this lottery system is by far not watertight when it comes to cheating the system (it is easy to take all winnings by betting all numbers in range), but we are not considering dishonest users here. (To solve this the betting and winning rates would have to have a properly designed system, or number of bets per single user limited).
